@@ -2,7 +2,7 @@ class ReportsController < ApplicationController
   before_action :set_report, only: [:edit, :show, :update]
 
   def index
-    @report = Report.all
+    @report = current_user.reports
   end
 
   def new
@@ -47,5 +47,9 @@ class ReportsController < ApplicationController
 
   def set_report
     @report = Report.find(params[:id])
+  end
+
+  def move_to_index
+    redirect_to root_path if current_user.id != @report.user.id
   end
 end
