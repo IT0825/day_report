@@ -1,0 +1,13 @@
+<div class= "contents">
+  <h1>日報の編集</h1>
+  <div class='nav'>
+    <div class='inner'>
+      <%= link_to "一覧へ", reports_path, class: "nav-link" %>
+    </div>
+  </div>
+  <%= form_with(model: @report, local: true) do |f| %>
+  <%= render 'error_messages', model: f.object %>
+    <%= render partial: "form", locals: { f: f } %>
+    <%= f.submit "更新する", class: 'btn btn-primary' %>
+  <% end %>
+</div>

@@ -1,0 +1,17 @@
+<div class= "contents">
+  <h1>日報一覧</h1>
+  <%= link_to "新規作成", new_report_path, class: "btn" %>
+  <div class="report">
+    <div class="report-inner">
+      <div class="report-titl">
+        <h4>タイトル</h4>
+      </div>
+      <div class="report-time">
+        <h4>登録日時</h4>
+      </div>
+    </div>
+  </div>
+  <% @report.each do |report| %>
+    <%= render partial: "report", locals: { report: report } %>
+  <% end %>
+</div>

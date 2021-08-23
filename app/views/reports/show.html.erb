@@ -1,0 +1,52 @@
+<div class= "contents">
+  <h1>日報の詳細</h1>
+  <div class='nav'>
+    <div class='inner'>
+      <%= link_to "一覧へ", reports_path, class: "nav-link" %>
+    </div>
+  </div>
+  <div class="show-contents">
+    <div class="show-contents-inner">
+      <div class="column">
+        <h3>ID</h3>
+      </div>
+      <div class="column-cotents">
+        <%= link_to @report.id, "#", method: :get, class: "link"  %>
+      </div>
+    </div>
+    <div class="show-contents-inner-second">
+      <div class="column">
+        <h3>タイトル</h3>
+      </div>
+      <div class="column-cotents">
+        <%= @report.title %>
+      </div>
+    </div>
+    <div class="show-contents-inner-second">
+      <div class="column">
+        <h3>本文</h3>
+      </div>
+      <div class="column-cotents">
+        <%= simple_format (h(@report.text)), {}, sanitize: false, wrapper_tag: "div" %>
+      </div>
+    </div>
+    <div class="show-contents-inner-second">
+      <div class="column">
+        <h3>登録日時</h3>
+      </div>
+      <div class="column-cotents">
+        <%= @report.created_at %>
+      </div>
+    </div>
+    <div class="show-contents-inner-second">
+      <div class="column">
+        <h3>更新日時</h3>
+      </div>
+      <div class="column-cotents">
+        <%= @report.updated_at %>
+      </div>
+    </div>
+    <%= link_to "編集", edit_report_path(@report.id), method: :get, class: "btn" %>
+    <%= link_to "削除", report_path(@report.id), method: :delete, data: { confirm: "日報「#{@report.title}」を削除します。よろしいですか？" }, class: "btn destroy-btn" %>
+  </div>
+</div>
