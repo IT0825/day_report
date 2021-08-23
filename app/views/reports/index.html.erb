@@ -1,6 +1,7 @@
 <div class= "contents">
   <h1>日報一覧</h1>
   <%= link_to "新規作成", new_report_path, class: "btn" %>
+  <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn" %>
   <div class="report">
     <div class="report-inner">
       <div class="report-titl">
