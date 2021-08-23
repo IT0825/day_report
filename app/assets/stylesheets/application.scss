@@ -1,0 +1,102 @@
+@import "bootstrap";
+
+.navbar-brand {
+  margin-left: 40px;
+}
+
+h1 {
+  padding-top: 10px;
+}
+
+.btn {
+  background-color: gray;
+  color: white;
+}
+
+.nav {
+  display: flex;
+}
+
+.btn-primary {
+  margin-top: 10px;
+}
+
+.inner {
+  margin: 0 0 0 auto;
+}
+
+.report {
+  margin-top: 10px;
+  padding-top: 20px;
+  border-top: 1px dashed grey;
+  border-bottom: 1px groove grey;
+}
+
+.report-inner {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.report-titl {
+  width: 65vw;
+}
+
+.report-time {
+  width: 35vw;
+  padding-left: 90px;
+}
+
+.report-content {
+  margin-top: 10px;
+  padding-top: 20px;
+  border-bottom: 1px dashed grey;
+}
+
+.report-content-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.report-inner-titl {
+  width: 45vw;
+}
+
+.reoprt-inner-time {
+  width: 40vw;
+}
+
+.show-btn {
+  margin-left: 50px;
+}
+
+.link {
+  color: gray;
+  text-decoration: none;
+}
+
+.show-contents-inner {
+  display: flex;
+  justify-content: space-evenly;
+  border-top: 1px dashed gray;
+  border-bottom: 1px dashed gray;
+}
+
+.column {
+  width: 25vw;
+  float: left;
+  margin: 10px 0 10px 0;
+}
+
+.column-cotents {
+  width: 75vw;
+  float: left;
+  color: gray;
+  font-size: 25px;
+  margin: 10px 0 10px 0;
+}
+
+.show-contents-inner-second {
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: 1px dashed gray;
+}
