@@ -27,7 +27,7 @@ class ReportsController < ApplicationController
 
   def update
     if @report.update(report_params)
-      redirect_to root_path, notice: "日報「#{report.title}」を更新しました。"
+      redirect_to root_path, notice: "日報「#{@report.title}」を更新しました。"
     else
       render :edit
     end
