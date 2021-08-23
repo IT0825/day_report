@@ -1,5 +1,6 @@
 class ReportsController < ApplicationController
   before_action :set_report, only: [:edit, :show, :update]
+  before_action :move_to_index, only: [:edit, :show]
 
   def index
     @report = current_user.reports
